@@ -20,8 +20,11 @@ def main():
   futureHour = (currentHour + hours) % 24
   futureMinute = (currentMinute + minutes) % 60
   extraHour = (currentMinute + minutes) // 60
-  print(extraHour)
-  print(futureHour, futureMinute) 
+  strHour = str(futureHour + extraHour)
+  strMin = str(futureMinute)
+  if futureMinute < 10:
+    strMin = "0" + strMin
+  print(strHour + ":" + strMin)
 
   #TODO:
   #Ask user for hours
