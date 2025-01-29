@@ -24,6 +24,7 @@ def main():
 
   response = random.choice(answers)
   print(response)
+  print(random.choice(answers))
 
 
 if __name__ == '__main__':

@@ -9,10 +9,19 @@ import datetime
 def main():
   #getting current time from system, storing to variable
   now = datetime.datetime.now()
-  currentHour = now.hour
+  currentHour = (now.hour - 6) % 24
   currentMinute = now.minute
 
   print (currentHour, currentMinute) #this is just for checking, we should delete it later
+  hours = input("Enter hours: ") 
+  minutes = input ("Enter minutes: ")
+  hours = int(hours)
+  minutes= int(minutes)
+  futureHour = (currentHour + hours) % 24
+  futureMinute = (currentMinute + minutes) % 60
+  extraHour = (currentMinute + minutes) // 60
+  print(extraHour)
+  print(futureHour, futureMinute) 
 
   #TODO:
   #Ask user for hours
