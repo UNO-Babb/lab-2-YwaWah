@@ -22,8 +22,7 @@ def main():
   print(answers[num])
   #print(answers[16])
 
-  response = random.choice(answers)
-  print(response)
+
   print(random.choice(answers))
 
 
